@@ -10,6 +10,14 @@ Create a webpage that fetches user data from the [JSONPlaceholder API](https://j
 
 ---
 
+## 🔗 Live Output
+
+You can view the live version of the project here:
+
+👉 **[Live Demo](https://nithinreddy1538.github.io/fetch-api-example/user_data_fetcher1.html)**
+
+> *(Hosted using GitHub Pages)*
+
 ## 🛠️ Technologies Used
 
 - ✅ HTML5
