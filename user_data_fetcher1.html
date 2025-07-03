@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Fetcher</title>
+    <link rel="stylesheet" href="user_data_fetcher1.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>User Directory</h1>
+            <p>Fetching user data from JSONPlaceholder API</p>
+        </header>
+
+        <div class="controls">
+            <button id="reloadBtn" class="reload-btn">
+                <span class="reload-icon">↻</span>
+                Reload Data
+            </button>
+        </div>
+
+        <div id="loadingSpinner" class="loading">
+            <div class="spinner"></div>
+            <p>Loading users...</p>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden">
+            <div class="error-icon">⚠️</div>
+            <h3>Oops! Something went wrong</h3>
+            <p id="errorText"></p>
+            <button id="retryBtn" class="retry-btn">Try Again</button>
+        </div>
+
+        <div id="userContainer" class="user-container">
+            <!-- User cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="user_data_fetcher1.js"></script>
+</body>
+</html>

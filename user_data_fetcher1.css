@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.reload-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.reload-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.reload-btn:active {
+    transform: translateY(0);
+}
+
+.reload-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.reload-btn:hover .reload-icon {
+    transform: rotate(180deg);
+}
+
+.loading {
+    text-align: center;
+    color: white;
+    margin: 50px 0;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error-message {
+    background: #ff4757;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 500px;
+    box-shadow: 0 8px 25px rgba(255, 71, 87, 0.3);
+}
+
+.error-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.error-message h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.error-message p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.retry-btn {
+    background: white;
+    color: #ff4757;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retry-btn:hover {
+    background: #f1f1f1;
+    transform: translateY(-1px);
+}
+
+.hidden {
+    display: none;
+}
+
+.user-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.user-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 5px solid #667eea;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.user-info h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.user-info .username {
+    color: #667eea;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.user-details {
+    space-y: 15px;
+}
+
+.detail-item {
+    margin-bottom: 15px;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-value {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.email-icon::before { content: "📧"; }
+.phone-icon::before { content: "📱"; }
+.address-icon::before { content: "🏠"; }
+.website-icon::before { content: "🌐"; }
+.company-icon::before { content: "🏢"; }
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .user-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .user-card {
+        padding: 20px;
+    }
+}
